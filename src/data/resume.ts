@@ -57,6 +57,22 @@ export const DATA = {
 
   skills: [
     {
+      category: "Frontend",
+      items: [
+        "React 19",
+        "Next.js 15",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Framer Motion",
+        "React Flow",
+        "Monaco Editor",
+        "Blazor",
+        "Responsive & accessible UI",
+      ],
+    },
+    {
       category: "AI / LLM",
       items: [
         "Anthropic API",
@@ -69,19 +85,6 @@ export const DATA = {
         "Claude Code",
         "Cursor",
         "Codex",
-      ],
-    },
-    {
-      category: "Frontend",
-      items: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "Tailwind CSS",
-        "React Flow",
-        "Blazor",
-        "Responsive & accessible UI",
       ],
     },
     {

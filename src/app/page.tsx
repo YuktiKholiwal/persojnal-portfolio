@@ -114,25 +114,39 @@ export default function Page() {
           </p>
         </BlurFade>
         <div className="flex flex-col gap-5">
-          {DATA.skills.map((group, gi) => (
-            <BlurFade key={group.category} delay={DELAY * 10 + gi * 0.05}>
-              <div className="flex flex-col gap-2">
-                <h3 className="text-sm font-medium text-muted-foreground">
-                  {group.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="flex h-7 items-center rounded-md border border-border bg-secondary/50 px-3 text-sm font-medium text-secondary-foreground"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+          {DATA.skills.map((group, gi) => {
+            const isFocus = group.category === "Frontend";
+            return (
+              <BlurFade key={group.category} delay={DELAY * 10 + gi * 0.05}>
+                <div
+                  className={
+                    isFocus
+                      ? "flex flex-col gap-2 rounded-xl border border-foreground/25 bg-secondary/30 p-4 ring-1 ring-foreground/5"
+                      : "flex flex-col gap-2"
+                  }
+                >
+                  <h3 className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                    {group.category}
+                    {isFocus && (
+                      <span className="rounded bg-foreground px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-background">
+                        Primary focus
+                      </span>
+                    )}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((skill) => (
+                      <span
+                        key={skill}
+                        className="flex h-7 items-center rounded-md border border-border bg-secondary/50 px-3 text-sm font-medium text-secondary-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </BlurFade>
-          ))}
+              </BlurFade>
+            );
+          })}
         </div>
       </section>
 
