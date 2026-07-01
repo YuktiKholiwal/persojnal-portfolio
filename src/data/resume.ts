@@ -18,9 +18,9 @@ export const DATA = {
   url: "https://yuktikholiwal.com",
   location: "New York",
   description:
-    "Software engineer building AI-powered applications — voice agents, agentic pipelines, and the interfaces that make them usable.",
+    "I build the AI you talk to. Real-time voice agents, a coding agent written from scratch in Zig, and the polished interfaces that make LLMs feel effortless.",
   summary:
-    "I'm a software engineer focused on turning LLMs into products people actually use. My work spans the full surface — real-time voice infrastructure, agentic development tools, and the React/TypeScript frontends that sit on top of them. I move fast in unfamiliar codebases: at Y Lift I inherited an undocumented production app, taught myself .NET and Blazor, and shipped a full platform migration in a month. I have multiple years of US work authorization runway, so I can start without sponsorship being a near-term concern.",
+    "I'm a software engineer who ships — fast. My thing is turning large language models into products people actually use. I founded 9thgen.ai, a real-time voice-agent platform now fielding customer calls for paying clients, and I wrote zac, a coding agent built from scratch in Zig with zero dependencies. When I joined Y Lift I inherited an undocumented production app, taught myself .NET and Blazor from zero, and shipped a full platform migration in a single month — for 10,000+ monthly users, at 99.8% uptime. Drop me into an unfamiliar codebase and something ships. (Bonus: I hold multiple years of US work authorization, so sponsorship isn't a near-term concern.)",
   avatarUrl: "/avatar.png", // drop a square image at public/avatar.png
 
   navbar: [
@@ -51,6 +51,9 @@ export const DATA = {
       },
     },
   },
+
+  skillsIntro:
+    "I work across the whole stack of AI product development. On the model side I've built real-time voice pipelines, agentic tool-loops, and RAG-style workflows against the Anthropic, OpenAI, and OpenRouter APIs — even writing a coding agent from scratch in Zig. On the frontend I ship polished React / Next.js / TypeScript interfaces, and on the backend I've worked in FastAPI, .NET, and Postgres and provisioned real cloud infrastructure through CloudFormation and the AWS SDK. I'm most comfortable in the messy middle — turning a raw LLM capability into something reliable that people can actually use.",
 
   skills: [
     {
@@ -87,8 +90,10 @@ export const DATA = {
         "FastAPI",
         "Flask",
         ".NET 9",
+        "Zig",
         "REST APIs",
         "PostgreSQL",
+        "Drizzle ORM",
         "MongoDB",
         "CloudFormation / AWS",
         "CI/CD",
@@ -121,28 +126,17 @@ export const DATA = {
       start: "2022",
       end: "2024",
     },
+    {
+      school: "Vellore Institute of Technology",
+      href: "https://vit.ac.in",
+      degree: "B.Tech in Computer Science & Engineering",
+      logoUrl: "",
+      start: "2018",
+      end: "2022",
+    },
   ],
 
   projects: [
-    {
-      title: "zac",
-      tagline: "A coding agent that lives in your terminal",
-      role: "",
-      href: "https://github.com/YuktiKholiwal/zac",
-      dates: "",
-      active: true,
-      description:
-        "A minimal AI coding agent written from scratch in Zig (~3,800 lines) — the same family as Claude Code or Cursor, but deliberately stripped to the smallest agent you can actually live inside. It's a multi-turn streaming tool-loop that talks directly to the Vercel AI Gateway over one HTTPS/SSE endpoint (no vendor SDK), so a single ~1–2 MB static binary with zero runtime dependencies can drive Claude, GPT, and Gemini. Ships 8 tools and 11 prompt modes, and layers on reliability niceties you rarely see: stale-context auto-refresh via file mtime tracking, diff-aware re-reads that only return what changed, self-calibrating cost projection before you hit enter, conversation+file snapshots with restore, and per-turn git commits with soft-reset undo. Runs inline in the terminal, 50 unit tests.",
-      technologies: [
-        "Zig",
-        "SSE streaming",
-        "Vercel AI Gateway",
-        "LLM tool-use",
-        "Git",
-      ],
-      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/zac" }],
-      image: "",
-    },
     {
       title: "cdesign",
       tagline: "A marketplace for design languages",
@@ -166,6 +160,25 @@ export const DATA = {
         { type: "GitHub", href: "https://github.com/YuktiKholiwal/cdesign" },
         { type: "npm", href: "https://www.npmjs.com/package/cdesign-cli" },
       ],
+      image: "",
+    },
+    {
+      title: "zac",
+      tagline: "A coding agent that lives in your terminal",
+      role: "",
+      href: "https://github.com/YuktiKholiwal/zac",
+      dates: "",
+      active: true,
+      description:
+        "A minimal AI coding agent written from scratch in Zig (~3,800 lines) — the same family as Claude Code or Cursor, but deliberately stripped to the smallest agent you can actually live inside. It's a multi-turn streaming tool-loop that talks directly to the Vercel AI Gateway over one HTTPS/SSE endpoint (no vendor SDK), so a single ~1–2 MB static binary with zero runtime dependencies can drive Claude, GPT, and Gemini. Ships 8 tools and 11 prompt modes, and layers on reliability niceties you rarely see: stale-context auto-refresh via file mtime tracking, diff-aware re-reads that only return what changed, self-calibrating cost projection before you hit enter, conversation+file snapshots with restore, and per-turn git commits with soft-reset undo. Runs inline in the terminal, 50 unit tests.",
+      technologies: [
+        "Zig",
+        "SSE streaming",
+        "Vercel AI Gateway",
+        "LLM tool-use",
+        "Git",
+      ],
+      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/zac" }],
       image: "",
     },
     {
@@ -220,6 +233,19 @@ export const DATA = {
       image: "",
     },
     {
+      title: "ctx",
+      tagline: "Get back up to speed on any codebase in seconds",
+      role: "",
+      href: "https://github.com/YuktiKholiwal/ctx-cli",
+      dates: "",
+      active: true,
+      description:
+        "A developer CLI that scans a git repository and produces a complete snapshot of where things stand: recent commits, uncommitted changes, scattered TODOs/FIXMEs, and an AI-powered analysis that flags risks, detects work-in-progress, and suggests what to do next. Supports focused diff reviews, a one-line summary for shell prompts, and JSON output for scripting — plus an offline mode that needs no API key.",
+      technologies: ["TypeScript", "Node.js", "Git", "LLM API"],
+      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ctx-cli" }],
+      image: "",
+    },
+    {
       title: "Chrome AI Sidebar",
       tagline: "Open-source browser extension",
       role: "",
@@ -243,19 +269,6 @@ export const DATA = {
         "A SaaS tool that generates editable mind maps from a prompt. Nodes can be edited, deleted, and expanded in real time, with the Anthropic API wired in for chat-driven refinement — blending AI generation with a collaborative editing UX.",
       technologies: ["Next.js", "React Flow", "Anthropic API"],
       links: [],
-      image: "",
-    },
-    {
-      title: "ctx",
-      tagline: "Get back up to speed on any codebase in seconds",
-      role: "",
-      href: "https://github.com/YuktiKholiwal/ctx-cli",
-      dates: "",
-      active: true,
-      description:
-        "A developer CLI that scans a git repository and produces a complete snapshot of where things stand: recent commits, uncommitted changes, scattered TODOs/FIXMEs, and an AI-powered analysis that flags risks, detects work-in-progress, and suggests what to do next. Supports focused diff reviews, a one-line summary for shell prompts, and JSON output for scripting — plus an offline mode that needs no API key.",
-      technologies: ["TypeScript", "Node.js", "Git", "LLM API"],
-      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ctx-cli" }],
       image: "",
     },
     {

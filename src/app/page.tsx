@@ -106,7 +106,12 @@ export default function Page() {
       {/* Skills */}
       <section id="skills" className="scroll-mt-20">
         <BlurFade delay={DELAY * 9}>
-          <h2 className="mb-4 text-xl font-semibold">Skills</h2>
+          <h2 className="mb-3 text-xl font-semibold">Skills</h2>
+        </BlurFade>
+        <BlurFade delay={DELAY * 9.5}>
+          <p className="mb-5 text-pretty leading-relaxed text-muted-foreground">
+            {DATA.skillsIntro}
+          </p>
         </BlurFade>
         <div className="flex flex-col gap-5">
           {DATA.skills.map((group, gi) => (
@@ -148,9 +153,11 @@ export default function Page() {
             <span className="w-fit rounded-md bg-foreground px-3 py-1 text-xs font-medium text-background">
               My Projects
             </span>
-            <h2 className="text-2xl font-bold tracking-tight">Things I&apos;ve built</h2>
+            <h2 className="text-2xl font-bold tracking-tight">Stuff I&apos;ve shipped</h2>
             <p className="text-muted-foreground">
-              A few projects I&apos;ve worked on. More on my GitHub.
+              From a voice platform with paying clients to a coding agent
+              written from scratch in Zig — here&apos;s what I&apos;ve been
+              building. Plenty more on my GitHub.
             </p>
           </div>
         </BlurFade>
@@ -220,9 +227,9 @@ export default function Page() {
             <span className="w-fit rounded-md bg-foreground px-3 py-1 text-xs font-medium text-background">
               Contact
             </span>
-            <h2 className="text-2xl font-bold tracking-tight">Get in touch</h2>
+            <h2 className="text-2xl font-bold tracking-tight">Let&apos;s build something</h2>
             <p className="max-w-md text-muted-foreground">
-              Want to work together or just say hi? Reach out at{" "}
+              Hiring, collaborating, or just curious? Reach out at{" "}
               <a
                 href={`mailto:${DATA.contact.email}`}
                 className="font-medium text-foreground underline underline-offset-4"
