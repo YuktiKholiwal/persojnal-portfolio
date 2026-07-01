@@ -3,15 +3,15 @@
 import GitHubCalendar from "react-github-calendar";
 import { DATA } from "@/data/resume";
 
-// Monochrome dark theme to match the minimal aesthetic.
+// Classic GitHub green palette (dark).
 const darkTheme = {
-  dark: ["#1c1c1c", "#3a3a3a", "#5c5c5c", "#888888", "#e6e6e6"],
+  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
 };
 
 export function GitHubSection() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="overflow-x-auto rounded-xl border border-border bg-card p-5">
+      <div className="github-calendar rounded-xl border border-border bg-card p-5">
         <GitHubCalendar
           username={DATA.githubUsername}
           colorScheme="dark"

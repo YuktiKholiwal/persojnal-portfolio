@@ -74,3 +74,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Make the GitHub contribution calendar scale to fit its column (whole year, no horizontal scroll). */
+.github-calendar .react-activity-calendar__calendar {
+  width: 100% !important;
+  height: auto !important;
+}

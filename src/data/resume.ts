@@ -29,7 +29,7 @@ export const DATA = {
   ],
 
   contact: {
-    email: "no9iolabs@gmail.com",
+    email: "ykholiwal2711@gmail.com",
     social: {
       GitHub: {
         name: "GitHub",
@@ -43,15 +43,9 @@ export const DATA = {
         icon: Linkedin,
         navbar: true,
       },
-      Resume: {
-        name: "Resume",
-        url: "/resume.pdf",
-        icon: FileText,
-        navbar: true,
-      },
       Email: {
         name: "Email",
-        url: "mailto:no9iolabs@gmail.com",
+        url: "mailto:ykholiwal2711@gmail.com",
         icon: Mail,
         navbar: true,
       },
@@ -131,6 +125,50 @@ export const DATA = {
 
   projects: [
     {
+      title: "zac",
+      tagline: "A coding agent that lives in your terminal",
+      role: "",
+      href: "https://github.com/YuktiKholiwal/zac",
+      dates: "",
+      active: true,
+      description:
+        "A minimal AI coding agent written from scratch in Zig (~3,800 lines) — the same family as Claude Code or Cursor, but deliberately stripped to the smallest agent you can actually live inside. It's a multi-turn streaming tool-loop that talks directly to the Vercel AI Gateway over one HTTPS/SSE endpoint (no vendor SDK), so a single ~1–2 MB static binary with zero runtime dependencies can drive Claude, GPT, and Gemini. Ships 8 tools and 11 prompt modes, and layers on reliability niceties you rarely see: stale-context auto-refresh via file mtime tracking, diff-aware re-reads that only return what changed, self-calibrating cost projection before you hit enter, conversation+file snapshots with restore, and per-turn git commits with soft-reset undo. Runs inline in the terminal, 50 unit tests.",
+      technologies: [
+        "Zig",
+        "SSE streaming",
+        "Vercel AI Gateway",
+        "LLM tool-use",
+        "Git",
+      ],
+      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/zac" }],
+      image: "",
+    },
+    {
+      title: "cdesign",
+      tagline: "A marketplace for design languages",
+      role: "",
+      href: "https://cdesign-orpin.vercel.app",
+      dates: "",
+      active: true,
+      description:
+        "A full-stack marketplace that turns real websites into installable design specs so AI coding agents build on-brand UI. A URL-to-spec engine scrapes a site's HTML/CSS with Cheerio, extracts design tokens (color, type, spacing, shadows, components), and streams them through the Claude API to generate a faithful design.md plus a live HTML preview — grounded in real scraped data, not guesses. Ships with a published npm CLI (npx cdesign-cli add <slug>) that drops a design package straight into a project's agent config for Claude Code, Cursor, and Windsurf. 20+ curated packages distilled from products like Apple, Stripe, Linear, Vercel, and Airbnb.",
+      technologies: [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind",
+        "Claude API",
+        "Cheerio",
+        "Vercel KV",
+      ],
+      links: [
+        { type: "Website", href: "https://cdesign-orpin.vercel.app" },
+        { type: "GitHub", href: "https://github.com/YuktiKholiwal/cdesign" },
+        { type: "npm", href: "https://www.npmjs.com/package/cdesign-cli" },
+      ],
+      image: "",
+    },
+    {
       title: "9thgen.ai",
       tagline: "Real-time AI voice agents",
       role: "Technical Founder",
@@ -145,15 +183,27 @@ export const DATA = {
     },
     {
       title: "Plot",
-      tagline: '"AWS for humans"',
+      tagline: "AWS deployment for humans",
       role: "",
       href: "#",
       dates: "",
       active: true,
       description:
-        "A deployment platform for developers who find the AWS Console intimidating. Users connect their own AWS account through a cross-account IAM role and deploy static sites, serverless functions, and databases through a clean UI — every resource lives in their account, and no credentials are ever stored. Everything is provisioned through CloudFormation. Shipped v0 (static-site deploy), then grew custom domains, GitHub auto-deploy, Lambda functions, DynamoDB, and a logs viewer.",
-      technologies: ["Next.js 15", "Clerk", "Neon/Drizzle", "CloudFormation", "AWS"],
-      links: [],
+        "Vercel-style one-click deploys, but the infrastructure runs in your own AWS account — which you fully own and pay for directly — with Plot holding zero credentials. You connect your account by installing a small, narrowly-scoped cross-account IAM role via CloudFormation; at deploy time Plot does an STS AssumeRole for temporary in-memory creds, then throws them away. All provisioning goes through CloudFormation templates (never raw SDK calls), so everything is tracked and cleanly deletable. Grew from a static-site v0 into a mini-Amplify: static sites (S3 + CloudFront with OAC), Lambda functions authored in an in-browser Monaco editor behind API Gateway, DynamoDB tables, custom domains with ACM, and GitHub push-to-deploy. Postgres stores only metadata — never credentials or content.",
+      technologies: [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Clerk",
+        "Neon/Drizzle",
+        "AWS SDK v3",
+        "CloudFormation",
+        "STS / IAM",
+      ],
+      links: [
+        { type: "GitHub", href: "https://github.com/YuktiKholiwal/AWS-Wrapper" },
+        { type: "Website", href: "https://aws-wrapper.vercel.app" },
+      ],
       image: "",
     },
     {
@@ -179,7 +229,7 @@ export const DATA = {
       description:
         "A lightweight, privacy-first Chrome extension for instant AI interactions on any webpage via capture mode. Integrated the OpenRouter API so developers can plug in any LLM with minimal setup, and designed it for extensibility — the repo picked up early forks and community feedback.",
       technologies: ["Chrome Extensions", "OpenRouter API", "JavaScript"],
-      links: [],
+      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ai-sidebar" }],
       image: "",
     },
     {
@@ -193,6 +243,50 @@ export const DATA = {
         "A SaaS tool that generates editable mind maps from a prompt. Nodes can be edited, deleted, and expanded in real time, with the Anthropic API wired in for chat-driven refinement — blending AI generation with a collaborative editing UX.",
       technologies: ["Next.js", "React Flow", "Anthropic API"],
       links: [],
+      image: "",
+    },
+    {
+      title: "ctx",
+      tagline: "Get back up to speed on any codebase in seconds",
+      role: "",
+      href: "https://github.com/YuktiKholiwal/ctx-cli",
+      dates: "",
+      active: true,
+      description:
+        "A developer CLI that scans a git repository and produces a complete snapshot of where things stand: recent commits, uncommitted changes, scattered TODOs/FIXMEs, and an AI-powered analysis that flags risks, detects work-in-progress, and suggests what to do next. Supports focused diff reviews, a one-line summary for shell prompts, and JSON output for scripting — plus an offline mode that needs no API key.",
+      technologies: ["TypeScript", "Node.js", "Git", "LLM API"],
+      links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ctx-cli" }],
+      image: "",
+    },
+    {
+      title: "Offline Voice AI Assistant",
+      tagline: "Speech-to-speech, fully local",
+      role: "",
+      href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant",
+      dates: "",
+      active: true,
+      description:
+        "A speech-to-speech AI assistant built entirely on open-source models so it runs locally with no cloud dependency — speech recognition, a language model, and text-to-speech wired into a single voice loop. A privacy-first counterpart to the cloud voice work behind 9thgen.ai.",
+      technologies: ["Python", "Open-source LLMs", "Speech-to-text", "TTS"],
+      links: [
+        { type: "GitHub", href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant" },
+      ],
+      image: "",
+    },
+    {
+      title: "Miami '26 Trip Organizer",
+      tagline: "One app to wrangle 15 friends and a chaotic group chat",
+      role: "",
+      href: "https://miami-trip-organizer.vercel.app",
+      dates: "",
+      active: true,
+      description:
+        "A live-syncing PWA built to plan a 15-person trip to Miami — flights, stay, crew, and itinerary in one shared home-screen app that updates for everyone the moment someone changes something. A small, fun build that solved a real coordination problem the group chat couldn't.",
+      technologies: ["JavaScript", "PWA", "Real-time sync", "Vercel"],
+      links: [
+        { type: "Website", href: "https://miami-trip-organizer.vercel.app" },
+        { type: "GitHub", href: "https://github.com/YuktiKholiwal/miami-trip-organizer" },
+      ],
       image: "",
     },
   ],
