@@ -116,7 +116,29 @@ export const DATA = {
       start: "Mar 2025",
       end: "Present",
       description:
-        "Inherited an undocumented production codebase and self-taught a new stack (.NET 8, Blazor, C#, Flutter), shipping to production within weeks. Led a full migration from Flutter to .NET 8 + Blazor in one month for an app serving 10,000+ monthly active users, holding 99.8% uptime throughout.",
+        "Inherited an undocumented production codebase and self-taught a new stack (.NET 8, Blazor, C#, Flutter), shipping to production within weeks. Led a full migration from Flutter to .NET 8 + Blazor in one month for an app serving 10,000+ monthly active users, holding 99.8% uptime throughout. Engineered storefront features (cart, checkout, promotions) and feedback/issue APIs handling 10+ daily tickets, cutting resolution time 40%.",
+    },
+    {
+      company: "9thgen.ai",
+      href: "https://9thgen.ai",
+      location: "New York",
+      title: "Technical Founder",
+      logoUrl: "",
+      start: "Jan 2025",
+      end: "Mar 2025",
+      description:
+        "Founded and led an AI voice-agent startup that cut customer service costs by up to 80%. Launched on Vercel, processed 1,500+ calls in the first month, acquired 5 paying clients at an 11.6% conversion rate, and boosted customer engagement 150% through natural-language voice interactions. Owned end-to-end product development and cross-functional teams, cutting development time 40%.",
+    },
+    {
+      company: "JerseySTEM",
+      href: "#",
+      location: "New Jersey",
+      title: "Software Development Engineer Intern",
+      logoUrl: "",
+      start: "Jun 2024",
+      end: "Sep 2024",
+      description:
+        "Built 8 RPA automation bots with Automation Anywhere, cutting manual effort 70%. Led development of an RPA bot to extract resumes from the iCIMS platform, improving efficiency 15%, and collaborated on automated testing that raised system reliability 20%.",
     },
   ],
 
@@ -126,7 +148,7 @@ export const DATA = {
       href: "https://www.buffalo.edu",
       degree: "MS in Computer Science",
       logoUrl: "",
-      start: "2022",
+      start: "2023",
       end: "2024",
     },
     {
@@ -134,8 +156,8 @@ export const DATA = {
       href: "https://vit.ac.in",
       degree: "B.Tech in Computer Science & Engineering",
       logoUrl: "",
-      start: "2018",
-      end: "2022",
+      start: "2019",
+      end: "2023",
     },
   ],
 
@@ -192,7 +214,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Built and shipped a voice-agent platform that handles customer service calls end-to-end, cutting support costs by up to 80%. The hard part was latency: a natural phone conversation falls apart above ~1 second of delay, so the system runs a bidirectional WebSocket audio pipeline (Twilio + GPT-4 Realtime) tuned to keep round-trip response under a second. Launched on Vercel, processed 1,500+ calls in the first month across 3 paying clients at an 11.6% conversion rate.",
+        "Built and shipped a voice-agent platform that handles customer service calls end-to-end, cutting support costs by up to 80%. The hard part was latency: a natural phone conversation falls apart above ~1 second of delay, so the system runs a bidirectional WebSocket audio pipeline (Twilio + GPT-4 Realtime) tuned to keep round-trip response under a second. Launched on Vercel, processed 1,500+ calls in the first month across 5 paying clients at an 11.6% conversion rate.",
       technologies: ["Twilio", "GPT-4 Realtime API", "WebSockets", "Vercel"],
       links: [{ type: "Website", href: "https://9thgen.ai" }],
       image: "",
