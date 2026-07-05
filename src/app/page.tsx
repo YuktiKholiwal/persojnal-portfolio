@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
@@ -27,9 +28,14 @@ export default function Page() {
             />
           </div>
           <BlurFade delay={DELAY}>
-            <div className="flex size-24 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-foreground/10 to-foreground/5 text-2xl font-semibold ring-1 ring-border md:size-28">
-              {DATA.initials}
-            </div>
+            <Image
+              src={DATA.avatarUrl}
+              alt={DATA.name}
+              width={112}
+              height={112}
+              priority
+              className="size-24 shrink-0 rounded-full object-cover ring-1 ring-border md:size-28"
+            />
           </BlurFade>
         </div>
       </section>
@@ -169,9 +175,9 @@ export default function Page() {
             </span>
             <h2 className="text-2xl font-bold tracking-tight">Stuff I&apos;ve shipped</h2>
             <p className="text-muted-foreground">
-              From a voice platform with paying clients to a coding agent
-              written from scratch in Zig — here&apos;s what I&apos;ve been
-              building. Plenty more on my GitHub.
+              A voice platform with paying clients, a coding agent written from
+              scratch in Zig, and a bunch of things in between. Plenty more on my
+              GitHub.
             </p>
           </div>
         </BlurFade>

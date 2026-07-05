@@ -18,9 +18,9 @@ export const DATA = {
   url: "https://yuktikholiwal.com",
   location: "New York",
   description:
-    "I build the AI you talk to. Real-time voice agents, a coding agent written from scratch in Zig, and the polished interfaces that make LLMs feel effortless.",
+    "I build the AI you talk to: real-time voice agents, a coding agent written from scratch in Zig, and the front-ends that make all of it usable.",
   summary:
-    "I'm a software engineer who ships — fast. My thing is turning large language models into products people actually use. I founded 9thgen.ai, a real-time voice-agent platform now fielding customer calls for paying clients, and I wrote zac, a coding agent built from scratch in Zig with zero dependencies. When I joined Y Lift I inherited an undocumented production app, taught myself .NET and Blazor from zero, and shipped a full platform migration in a single month — for 10,000+ monthly users, at 99.8% uptime. Drop me into an unfamiliar codebase and something ships. (Bonus: I hold multiple years of US work authorization, so sponsorship isn't a near-term concern.)",
+    "I'm a software engineer who ships fast. What I'm good at is turning large language models into products people actually use. I founded 9thgen.ai, a real-time voice-agent platform that now takes customer calls for paying clients, and I wrote zac, a coding agent built from scratch in Zig with zero dependencies. When I joined Y Lift I inherited an undocumented production app, taught myself .NET and Blazor from scratch, and shipped a full platform migration in one month for 10,000+ monthly users at 99.8% uptime. Hand me an unfamiliar codebase and I'll get something working. (I also hold multiple years of US work authorization, so sponsorship isn't a near-term concern.)",
   avatarUrl: "/avatar.png", // drop a square image at public/avatar.png
 
   navbar: [
@@ -53,7 +53,7 @@ export const DATA = {
   },
 
   skillsIntro:
-    "I work across the whole stack of AI product development. On the model side I've built real-time voice pipelines, agentic tool-loops, and RAG-style workflows against the Anthropic, OpenAI, and OpenRouter APIs — even writing a coding agent from scratch in Zig. On the frontend I ship polished React / Next.js / TypeScript interfaces, and on the backend I've worked in FastAPI, .NET, and Postgres and provisioned real cloud infrastructure through CloudFormation and the AWS SDK. I'm most comfortable in the messy middle — turning a raw LLM capability into something reliable that people can actually use.",
+    "I work across the whole stack of AI product development. On the model side I've built real-time voice pipelines, agentic tool-loops, and RAG-style workflows against the Anthropic, OpenAI, and OpenRouter APIs, and I wrote a coding agent from scratch in Zig. On the frontend I ship React, Next.js, and TypeScript interfaces. On the backend I've worked in FastAPI, .NET, and Postgres, and provisioned real cloud infrastructure with CloudFormation and the AWS SDK. The part I like most is the messy middle: taking a raw LLM capability and making it reliable enough for people to actually use.",
 
   skills: [
     {
@@ -116,7 +116,7 @@ export const DATA = {
       start: "Mar 2025",
       end: "Present",
       description:
-        "Inherited an undocumented production codebase and self-taught a new stack (.NET 8, Blazor, C#, Flutter), shipping to production within weeks. Led a full migration from Flutter to .NET 8 + Blazor in one month for an app serving 10,000+ monthly active users, holding 99.8% uptime throughout. Engineered storefront features (cart, checkout, promotions) and feedback/issue APIs handling 10+ daily tickets, cutting resolution time 40%.",
+        "Inherited an undocumented production codebase and self-taught a new stack (.NET 8, Blazor, C#, Flutter), shipping to production within weeks. Led a full migration from Flutter to .NET 8 + Blazor in one month for an app serving 10,000+ monthly active users, and held 99.8% uptime throughout. Built storefront features (cart, checkout, promotions) and feedback and issue APIs that handle 10+ daily tickets, cutting resolution time 40%.",
     },
     {
       company: "9thgen.ai",
@@ -170,7 +170,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A full-stack marketplace that turns real websites into installable design specs so AI coding agents build on-brand UI. A URL-to-spec engine scrapes a site's HTML/CSS with Cheerio, extracts design tokens (color, type, spacing, shadows, components), and streams them through the Claude API to generate a faithful design.md plus a live HTML preview — grounded in real scraped data, not guesses. Ships with a published npm CLI (npx cdesign-cli add <slug>) that drops a design package straight into a project's agent config for Claude Code, Cursor, and Windsurf. 20+ curated packages distilled from products like Apple, Stripe, Linear, Vercel, and Airbnb.",
+        "A full-stack marketplace that turns real websites into installable design specs so AI coding agents build on-brand UI. A URL-to-spec engine scrapes a site's HTML/CSS with Cheerio, extracts design tokens (color, type, spacing, shadows, components), and streams them through the Claude API to generate a faithful design.md plus a live HTML preview. The output is grounded in real scraped data rather than guesses. Ships with a published npm CLI (npx cdesign-cli add <slug>) that drops a design package straight into a project's agent config for Claude Code, Cursor, and Windsurf. 20+ curated packages distilled from products like Apple, Stripe, Linear, Vercel, and Airbnb.",
       technologies: [
         "Next.js 15",
         "React 19",
@@ -195,7 +195,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A minimal AI coding agent written from scratch in Zig (~3,800 lines) — the same family as Claude Code or Cursor, but deliberately stripped to the smallest agent you can actually live inside. It's a multi-turn streaming tool-loop that talks directly to the Vercel AI Gateway over one HTTPS/SSE endpoint (no vendor SDK), so a single ~1–2 MB static binary with zero runtime dependencies can drive Claude, GPT, and Gemini. Ships 8 tools and 11 prompt modes, and layers on reliability niceties you rarely see: stale-context auto-refresh via file mtime tracking, diff-aware re-reads that only return what changed, self-calibrating cost projection before you hit enter, conversation+file snapshots with restore, and per-turn git commits with soft-reset undo. Runs inline in the terminal, 50 unit tests.",
+        "A minimal AI coding agent written from scratch in Zig (~3,800 lines). Same family as Claude Code or Cursor, but deliberately stripped down to the smallest agent you can actually live inside. It's a multi-turn streaming tool-loop that talks directly to the Vercel AI Gateway over one HTTPS/SSE endpoint (no vendor SDK), so a single 1-to-2 MB static binary with zero runtime dependencies can drive Claude, GPT, and Gemini. It ships 8 tools and 11 prompt modes, plus reliability details you rarely see: stale-context auto-refresh via file mtime tracking, diff-aware re-reads that only return what changed, cost projection before you hit enter, conversation and file snapshots with restore, and per-turn git commits with soft-reset undo. Runs inline in the terminal, with 50 unit tests.",
       technologies: [
         "Zig",
         "SSE streaming",
@@ -227,7 +227,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Vercel-style one-click deploys, but the infrastructure runs in your own AWS account — which you fully own and pay for directly — with Plot holding zero credentials. You connect your account by installing a small, narrowly-scoped cross-account IAM role via CloudFormation; at deploy time Plot does an STS AssumeRole for temporary in-memory creds, then throws them away. All provisioning goes through CloudFormation templates (never raw SDK calls), so everything is tracked and cleanly deletable. Grew from a static-site v0 into a mini-Amplify: static sites (S3 + CloudFront with OAC), Lambda functions authored in an in-browser Monaco editor behind API Gateway, DynamoDB tables, custom domains with ACM, and GitHub push-to-deploy. Postgres stores only metadata — never credentials or content.",
+        "Vercel-style one-click deploys, except the infrastructure runs in your own AWS account, which you fully own and pay for directly, with Plot holding zero credentials. You connect your account by installing a small, narrowly scoped cross-account IAM role via CloudFormation. At deploy time Plot does an STS AssumeRole for temporary in-memory creds, then throws them away. All provisioning goes through CloudFormation templates rather than raw SDK calls, so everything is tracked and cleanly deletable. It grew from a static-site v0 into a mini-Amplify: static sites (S3 and CloudFront with OAC), Lambda functions authored in an in-browser Monaco editor behind API Gateway, DynamoDB tables, custom domains with ACM, and GitHub push-to-deploy. Postgres stores only metadata, never credentials or content.",
       technologies: [
         "Next.js 15",
         "React 19",
@@ -265,7 +265,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A developer CLI that scans a git repository and produces a complete snapshot of where things stand: recent commits, uncommitted changes, scattered TODOs/FIXMEs, and an AI-powered analysis that flags risks, detects work-in-progress, and suggests what to do next. Supports focused diff reviews, a one-line summary for shell prompts, and JSON output for scripting — plus an offline mode that needs no API key.",
+        "A developer CLI that scans a git repository and produces a complete snapshot of where things stand: recent commits, uncommitted changes, scattered TODOs/FIXMEs, and an AI-powered analysis that flags risks, detects work-in-progress, and suggests what to do next. It also supports focused diff reviews, a one-line summary for shell prompts, JSON output for scripting, and an offline mode that needs no API key.",
       technologies: ["TypeScript", "Node.js", "Git", "LLM API"],
       links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ctx-cli" }],
       image: "",
@@ -278,7 +278,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A lightweight, privacy-first Chrome extension for instant AI interactions on any webpage via capture mode. Integrated the OpenRouter API so developers can plug in any LLM with minimal setup, and designed it for extensibility — the repo picked up early forks and community feedback.",
+        "A lightweight, privacy-first Chrome extension for instant AI interactions on any webpage via capture mode. Integrated the OpenRouter API so developers can plug in any LLM with minimal setup, and designed it for extensibility, so the repo picked up early forks and community feedback.",
       technologies: ["Chrome Extensions", "OpenRouter API", "JavaScript"],
       links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ai-sidebar" }],
       image: "",
@@ -291,7 +291,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A SaaS tool that generates editable mind maps from a prompt. Nodes can be edited, deleted, and expanded in real time, with the Anthropic API wired in for chat-driven refinement — blending AI generation with a collaborative editing UX.",
+        "A SaaS tool that generates editable mind maps from a prompt. You can edit, delete, and expand nodes in real time, and the Anthropic API is wired in so you can refine a map through chat.",
       technologies: ["Next.js", "React Flow", "Anthropic API"],
       links: [],
       image: "",
@@ -304,7 +304,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A speech-to-speech AI assistant built entirely on open-source models so it runs locally with no cloud dependency — speech recognition, a language model, and text-to-speech wired into a single voice loop. A privacy-first counterpart to the cloud voice work behind 9thgen.ai.",
+        "A speech-to-speech AI assistant built entirely on open-source models, so it runs locally with no cloud dependency. Speech recognition, a language model, and text-to-speech are wired into a single voice loop. It's the privacy-first counterpart to the cloud voice work behind 9thgen.ai.",
       technologies: ["Python", "Open-source LLMs", "Speech-to-text", "TTS"],
       links: [
         { type: "GitHub", href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant" },
@@ -319,7 +319,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A live-syncing PWA built to plan a 15-person trip to Miami — flights, stay, crew, and itinerary in one shared home-screen app that updates for everyone the moment someone changes something. A small, fun build that solved a real coordination problem the group chat couldn't.",
+        "A live-syncing PWA built to plan a 15-person trip to Miami: flights, stay, crew, and itinerary in one shared home-screen app that updates for everyone the moment someone changes something. A small, fun build that solved a coordination problem the group chat couldn't.",
       technologies: ["JavaScript", "PWA", "Real-time sync", "Vercel"],
       links: [
         { type: "Website", href: "https://miami-trip-organizer.vercel.app" },
