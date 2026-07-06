@@ -127,7 +127,7 @@ export default function Page() {
                 <div
                   className={
                     isFocus
-                      ? "glass flex flex-col gap-2 rounded-xl p-4"
+                      ? "flex flex-col gap-2 rounded-xl border border-foreground/20 bg-background/40 p-4"
                       : "flex flex-col gap-2"
                   }
                 >
@@ -184,7 +184,7 @@ export default function Page() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {DATA.projects.map((project, i) => (
             <BlurFade key={project.title} delay={DELAY * 12 + i * 0.05}>
-              <article className="glass flex h-full flex-col rounded-xl p-5 transition-transform duration-200 hover:-translate-y-1">
+              <article className="flex h-full flex-col rounded-xl border border-border bg-background/40 p-5 transition-transform duration-200 hover:-translate-y-1">
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex flex-col gap-0.5">
                     <h3 className="font-semibold">{project.title}</h3>

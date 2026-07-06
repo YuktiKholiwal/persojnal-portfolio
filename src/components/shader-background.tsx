@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { GrainGradient } from "@paper-design/shaders-react";
 
 /**
- * Full-width grain-gradient shader banner at the very top of the page.
- * WebGL is client-only, so the fixed-height band reserves its space on the
- * server and the canvas mounts after hydration (no layout shift, no SSR crash).
+ * Full-screen grain-gradient shader fixed behind the whole site. The page
+ * content sits on a frosted glass panel, so this can stay vivid without
+ * hurting readability. WebGL is client-only, so it mounts after hydration.
  */
-export function GrainHeader() {
+export function ShaderBackground() {
   const [mounted, setMounted] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
@@ -24,22 +24,20 @@ export function GrainHeader() {
   return (
     <div
       aria-hidden="true"
-      className="relative h-40 w-full overflow-hidden sm:h-52"
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
     >
       {mounted && (
         <GrainGradient
           style={{ width: "100%", height: "100%" }}
-          colorBack="#0a0a0f"
+          colorBack="#08080c"
           colors={["#7300ff", "#eba8ff", "#00bfff", "#2a00ff"]}
-          shape="corners"
-          softness={0.6}
-          intensity={0.5}
+          shape="wave"
+          softness={0.7}
+          intensity={0.45}
           noise={0.2}
-          speed={reducedMotion ? 0 : 1}
+          speed={reducedMotion ? 0 : 0.7}
         />
       )}
-      {/* Fade the banner into the page background along its bottom edge. */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-background" />
     </div>
   );
 }

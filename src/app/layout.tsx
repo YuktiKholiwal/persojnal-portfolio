@@ -3,7 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
-import { GrainHeader } from "@/components/grain-header";
+import { ShaderBackground } from "@/components/shader-background";
 import { DATA } from "@/data/resume";
 
 const geist = Geist({
@@ -40,9 +40,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <GrainHeader />
-          <div className="mx-auto min-h-dvh max-w-2xl px-6 pb-24 pt-12 sm:pt-16">
-            {children}
+          <ShaderBackground />
+          <div className="mx-auto max-w-2xl px-4 py-6 sm:px-6 sm:py-12">
+            <div className="glass-panel rounded-3xl px-6 py-12 sm:px-10 sm:py-16">
+              {children}
+            </div>
           </div>
           <Navbar />
         </ThemeProvider>
