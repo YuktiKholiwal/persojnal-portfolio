@@ -155,3 +155,57 @@ html {
   );
   pointer-events: none;
 }
+
+/* ── Interactive project card: cursor-following glow, lift, accent edge ── */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    240px circle at var(--mx, 50%) var(--my, 0%),
+    oklch(0.72 0.16 285 / 0.22),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  border-color: oklch(0.72 0.16 285 / 0.5);
+  box-shadow: 0 16px 44px -22px oklch(0.65 0.2 285 / 0.5);
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight-card:hover {
+    transform: none;
+  }
+}
+
+/* ── Animated left-to-right underline for text links ── */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 250ms ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 1.5px;
+}

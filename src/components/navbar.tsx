@@ -6,7 +6,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { cn } from "@/lib/utils";
 
 const iconButton =
-  "flex size-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground";
+  "flex size-10 items-center justify-center rounded-full text-muted-foreground transition-all duration-200 hover:scale-110 hover:bg-accent hover:text-foreground active:scale-95";
 
 export function Navbar() {
   const socials = Object.values(DATA.contact.social).filter((s) => s.navbar);

@@ -6,6 +6,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { GitHubSection } from "@/components/github-section";
 import { SkillIcon } from "@/components/skill-icon";
+import { SpotlightCard } from "@/components/spotlight-card";
 
 const DELAY = 0.04;
 
@@ -144,11 +145,11 @@ export default function Page() {
                     {group.items.map((skill) => (
                       <span
                         key={skill}
-                        className="flex h-7 items-center gap-1.5 rounded-md border border-border bg-secondary/50 pl-2 pr-3 text-sm font-medium text-secondary-foreground"
+                        className="group/pill flex h-7 items-center gap-1.5 rounded-md border border-border bg-secondary/50 pl-2 pr-3 text-sm font-medium text-secondary-foreground transition-colors hover:border-foreground/30 hover:bg-secondary"
                       >
                         <SkillIcon
                           name={skill}
-                          className="size-3.5 shrink-0 opacity-70"
+                          className="size-3.5 shrink-0 opacity-70 transition-opacity group-hover/pill:opacity-100"
                         />
                         {skill}
                       </span>
@@ -189,7 +190,7 @@ export default function Page() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {DATA.projects.map((project, i) => (
             <BlurFade key={project.title} delay={DELAY * 12 + i * 0.05}>
-              <article className="flex h-full flex-col rounded-xl border border-border bg-background/40 p-5 transition-transform duration-200 hover:-translate-y-1">
+              <SpotlightCard className="flex h-full flex-col rounded-xl border border-border bg-background/40 p-5">
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex flex-col gap-0.5">
                     <h3 className="font-semibold">{project.title}</h3>
@@ -231,15 +232,15 @@ export default function Page() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 rounded-md bg-foreground px-2.5 py-1 text-xs font-medium text-background transition-opacity hover:opacity-80"
+                        className="group/link inline-flex items-center gap-1 rounded-md bg-foreground px-2.5 py-1 text-xs font-medium text-background transition-all hover:gap-1.5 hover:opacity-90"
                       >
                         {link.type}
-                        <ArrowUpRight className="size-3" />
+                        <ArrowUpRight className="size-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                       </a>
                     ))}
                   </div>
                 )}
-              </article>
+              </SpotlightCard>
             </BlurFade>
           ))}
         </div>
@@ -257,7 +258,7 @@ export default function Page() {
               Hiring, collaborating, or just curious? Reach out at{" "}
               <a
                 href={`mailto:${DATA.contact.email}`}
-                className="font-medium text-foreground underline underline-offset-4"
+                className="link-underline font-medium text-foreground"
               >
                 {DATA.contact.email}
               </a>{" "}
