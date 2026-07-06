@@ -170,7 +170,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A full-stack marketplace that turns real websites into installable design specs so AI coding agents build on-brand UI. A URL-to-spec engine scrapes a site's HTML/CSS with Cheerio, extracts design tokens (color, type, spacing, shadows, components), and streams them through the Claude API to generate a faithful design.md plus a live HTML preview. The output is grounded in real scraped data rather than guesses. Ships with a published npm CLI (npx cdesign-cli add <slug>) that drops a design package straight into a project's agent config for Claude Code, Cursor, and Windsurf. 20+ curated packages distilled from products like Apple, Stripe, Linear, Vercel, and Airbnb.",
+        "Turns real websites into installable design specs so AI coding agents build on-brand UI. Scrapes a site's CSS with Cheerio and streams the design tokens through the Claude API into a design.md plus live preview. Ships as an npm CLI with 20+ curated packages (Apple, Stripe, Linear, Vercel, Airbnb).",
       technologies: [
         "Next.js 15",
         "React 19",
@@ -195,7 +195,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A minimal AI coding agent written from scratch in Zig (~3,800 lines). Same family as Claude Code or Cursor, but deliberately stripped down to the smallest agent you can actually live inside. It's a multi-turn streaming tool-loop that talks directly to the Vercel AI Gateway over one HTTPS/SSE endpoint (no vendor SDK), so a single 1-to-2 MB static binary with zero runtime dependencies can drive Claude, GPT, and Gemini. It ships 8 tools and 11 prompt modes, plus reliability details you rarely see: stale-context auto-refresh via file mtime tracking, diff-aware re-reads that only return what changed, cost projection before you hit enter, conversation and file snapshots with restore, and per-turn git commits with soft-reset undo. Runs inline in the terminal, with 50 unit tests.",
+        "A minimal AI coding agent written from scratch in Zig (~3,800 lines). Talks directly to the Vercel AI Gateway over one SSE endpoint with no vendor SDK, so a single dependency-free binary drives Claude, GPT, and Gemini. Ships 8 tools, context auto-refresh, snapshots, and per-turn git undo, with 50 unit tests.",
       technologies: [
         "Zig",
         "SSE streaming",
@@ -214,7 +214,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Built and shipped a voice-agent platform that handles customer service calls end-to-end, cutting support costs by up to 80%. The hard part was latency: a natural phone conversation falls apart above ~1 second of delay, so the system runs a bidirectional WebSocket audio pipeline (Twilio + GPT-4 Realtime) tuned to keep round-trip response under a second. Launched on Vercel, processed 1,500+ calls in the first month across 5 paying clients at an 11.6% conversion rate.",
+        "A voice-agent platform that handles customer service calls end-to-end, cutting support costs by up to 80%. A bidirectional WebSocket pipeline (Twilio + GPT-4 Realtime) keeps round-trip response under a second. Processed 1,500+ calls in the first month across 5 paying clients at an 11.6% conversion rate.",
       technologies: ["Twilio", "GPT-4 Realtime API", "WebSockets", "Vercel"],
       links: [{ type: "Website", href: "https://9thgen.ai" }],
       image: "",
@@ -227,7 +227,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Vercel-style one-click deploys, except the infrastructure runs in your own AWS account, which you fully own and pay for directly, with Plot holding zero credentials. You connect your account by installing a small, narrowly scoped cross-account IAM role via CloudFormation. At deploy time Plot does an STS AssumeRole for temporary in-memory creds, then throws them away. All provisioning goes through CloudFormation templates rather than raw SDK calls, so everything is tracked and cleanly deletable. It grew from a static-site v0 into a mini-Amplify: static sites (S3 and CloudFront with OAC), Lambda functions authored in an in-browser Monaco editor behind API Gateway, DynamoDB tables, custom domains with ACM, and GitHub push-to-deploy. Postgres stores only metadata, never credentials or content.",
+        "Vercel-style one-click deploys that run in your own AWS account, with Plot holding zero credentials (it uses a temporary AssumeRole, then discards it). Provisions static sites, Lambdas, DynamoDB, and custom domains through CloudFormation, so everything is tracked and cleanly deletable.",
       technologies: [
         "Next.js 15",
         "React 19",
@@ -252,7 +252,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "An environment where agents autonomously build, deploy, and ship code. I built and tested core developer-facing UI in React + TypeScript and worked hands-on with the agentic coding pipelines and LLM integration underneath it. Reached 200+ early users.",
+        "An environment where agents autonomously build, deploy, and ship code. I built core developer-facing UI in React + TypeScript and worked on the agentic pipelines underneath. Reached 200+ early users.",
       technologies: ["React", "TypeScript", "Agentic pipelines", "LLM APIs"],
       links: [{ type: "Website", href: "https://orbit.build" }],
       image: "",
@@ -265,7 +265,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A developer CLI that scans a git repository and produces a complete snapshot of where things stand: recent commits, uncommitted changes, scattered TODOs/FIXMEs, and an AI-powered analysis that flags risks, detects work-in-progress, and suggests what to do next. It also supports focused diff reviews, a one-line summary for shell prompts, JSON output for scripting, and an offline mode that needs no API key.",
+        "A CLI that scans a git repo and snapshots where things stand: recent commits, uncommitted changes, stray TODOs, and an AI analysis of risks and what to do next. Supports diff reviews, shell-prompt summaries, JSON output, and an offline mode with no API key.",
       technologies: ["TypeScript", "Node.js", "Git", "LLM API"],
       links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ctx-cli" }],
       image: "",
@@ -278,7 +278,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A lightweight, privacy-first Chrome extension for instant AI interactions on any webpage via capture mode. Integrated the OpenRouter API so developers can plug in any LLM with minimal setup, and designed it for extensibility, so the repo picked up early forks and community feedback.",
+        "A lightweight, privacy-first Chrome extension for instant AI on any webpage via capture mode. Integrates the OpenRouter API so developers can plug in any LLM, and picked up early forks and community feedback.",
       technologies: ["Chrome Extensions", "OpenRouter API", "JavaScript"],
       links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ai-sidebar" }],
       image: "",
@@ -291,7 +291,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A SaaS tool that generates editable mind maps from a prompt. You can edit, delete, and expand nodes in real time, and the Anthropic API is wired in so you can refine a map through chat.",
+        "Generates editable mind maps from a prompt. Edit, delete, and expand nodes in real time, with the Anthropic API wired in to refine a map through chat.",
       technologies: ["Next.js", "React Flow", "Anthropic API"],
       links: [],
       image: "",
@@ -304,7 +304,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A speech-to-speech AI assistant built entirely on open-source models, so it runs locally with no cloud dependency. Speech recognition, a language model, and text-to-speech are wired into a single voice loop. It's the privacy-first counterpart to the cloud voice work behind 9thgen.ai.",
+        "A speech-to-speech assistant built entirely on open-source models, so it runs locally with no cloud dependency. Speech recognition, an LLM, and text-to-speech in a single voice loop. The privacy-first counterpart to 9thgen.ai.",
       technologies: ["Python", "Open-source LLMs", "Speech-to-text", "TTS"],
       links: [
         { type: "GitHub", href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant" },
@@ -319,7 +319,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A live-syncing PWA built to plan a 15-person trip to Miami: flights, stay, crew, and itinerary in one shared home-screen app that updates for everyone the moment someone changes something. A small, fun build that solved a coordination problem the group chat couldn't.",
+        "A live-syncing PWA to plan a 15-person Miami trip: flights, stay, crew, and itinerary in one shared app that updates for everyone instantly. A small, fun build that fixed what the group chat couldn't.",
       technologies: ["JavaScript", "PWA", "Real-time sync", "Vercel"],
       links: [
         { type: "Website", href: "https://miami-trip-organizer.vercel.app" },
