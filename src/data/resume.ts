@@ -170,7 +170,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Turns real websites into installable design specs so AI coding agents build on-brand UI. Scrapes a site's CSS with Cheerio and streams the design tokens through the Claude API into a design.md plus live preview. Ships as an npm CLI with 20+ curated packages (Apple, Stripe, Linear, Vercel, Airbnb).",
+        "Scrapes any website's CSS into an installable design spec so AI coding agents build on-brand UI. Shipped as an npm CLI with 20+ packages.",
       technologies: [
         "Next.js 15",
         "React 19",
@@ -195,7 +195,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A minimal AI coding agent written from scratch in Zig (~3,800 lines). Talks directly to the Vercel AI Gateway over one SSE endpoint with no vendor SDK, so a single dependency-free binary drives Claude, GPT, and Gemini. Ships 8 tools, context auto-refresh, snapshots, and per-turn git undo, with 50 unit tests.",
+        "A coding agent I wrote from scratch in Zig, about 3,800 lines, one dependency-free binary that drives Claude, GPT, and Gemini from the terminal.",
       technologies: [
         "Zig",
         "SSE streaming",
@@ -214,7 +214,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A voice-agent platform that handles customer service calls end-to-end, cutting support costs by up to 80%. A bidirectional WebSocket pipeline (Twilio + GPT-4 Realtime) keeps round-trip response under a second. Processed 1,500+ calls in the first month across 5 paying clients at an 11.6% conversion rate.",
+        "AI voice agents that take customer calls end to end and cut support costs up to 80%. Handled 1,500+ calls across 5 paying clients in the first month.",
       technologies: ["Twilio", "GPT-4 Realtime API", "WebSockets", "Vercel"],
       links: [{ type: "Website", href: "https://9thgen.ai" }],
       image: "",
@@ -227,7 +227,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Vercel-style one-click deploys that run in your own AWS account, with Plot holding zero credentials (it uses a temporary AssumeRole, then discards it). Provisions static sites, Lambdas, DynamoDB, and custom domains through CloudFormation, so everything is tracked and cleanly deletable.",
+        "One-click deploys that run in your own AWS account, with Plot holding zero credentials. Provisions everything through CloudFormation, so it stays fully trackable and deletable.",
       technologies: [
         "Next.js 15",
         "React 19",
@@ -252,7 +252,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "An environment where agents autonomously build, deploy, and ship code. I built core developer-facing UI in React + TypeScript and worked on the agentic pipelines underneath. Reached 200+ early users.",
+        "An environment where agents build and ship code on their own. I built the developer-facing React UI and worked on the pipelines under it, now at 200+ early users.",
       technologies: ["React", "TypeScript", "Agentic pipelines", "LLM APIs"],
       links: [{ type: "Website", href: "https://orbit.build" }],
       image: "",
@@ -265,7 +265,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A CLI that scans a git repo and snapshots where things stand: recent commits, uncommitted changes, stray TODOs, and an AI analysis of risks and what to do next. Supports diff reviews, shell-prompt summaries, JSON output, and an offline mode with no API key.",
+        "A CLI that scans a git repo and tells you where things stand: recent work, uncommitted changes, stray TODOs, and an AI read on what to do next.",
       technologies: ["TypeScript", "Node.js", "Git", "LLM API"],
       links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ctx-cli" }],
       image: "",
@@ -278,7 +278,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A lightweight, privacy-first Chrome extension for instant AI on any webpage via capture mode. Integrates the OpenRouter API so developers can plug in any LLM, and picked up early forks and community feedback.",
+        "A privacy-first Chrome extension for instant AI on any webpage, wired to OpenRouter so you can plug in any LLM.",
       technologies: ["Chrome Extensions", "OpenRouter API", "JavaScript"],
       links: [{ type: "GitHub", href: "https://github.com/YuktiKholiwal/ai-sidebar" }],
       image: "",
@@ -291,7 +291,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "Generates editable mind maps from a prompt. Edit, delete, and expand nodes in real time, with the Anthropic API wired in to refine a map through chat.",
+        "Turns a prompt into an editable mind map you can expand and rearrange live, with Anthropic wired in to refine it through chat.",
       technologies: ["Next.js", "React Flow", "Anthropic API"],
       links: [],
       image: "",
@@ -304,7 +304,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A speech-to-speech assistant built entirely on open-source models, so it runs locally with no cloud dependency. Speech recognition, an LLM, and text-to-speech in a single voice loop. The privacy-first counterpart to 9thgen.ai.",
+        "A fully local speech-to-speech assistant built on open-source models, no cloud. The privacy-first take on my 9thgen voice work.",
       technologies: ["Python", "Open-source LLMs", "Speech-to-text", "TTS"],
       links: [
         { type: "GitHub", href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant" },
@@ -319,7 +319,7 @@ export const DATA = {
       dates: "",
       active: true,
       description:
-        "A live-syncing PWA to plan a 15-person Miami trip: flights, stay, crew, and itinerary in one shared app that updates for everyone instantly. A small, fun build that fixed what the group chat couldn't.",
+        "A live-syncing PWA that planned a 15-person Miami trip, flights, stay, and itinerary in one shared app. Fixed what the group chat couldn't.",
       technologies: ["JavaScript", "PWA", "Real-time sync", "Vercel"],
       links: [
         { type: "Website", href: "https://miami-trip-organizer.vercel.app" },
