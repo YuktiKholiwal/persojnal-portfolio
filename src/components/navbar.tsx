@@ -15,7 +15,7 @@ export function Navbar() {
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex h-16 items-end justify-center">
       <div
         className={cn(
-          "pointer-events-auto mb-4 flex items-center gap-1 rounded-full border border-border bg-background/80 px-2 py-1.5 shadow-lg backdrop-blur-md",
+          "glass pointer-events-auto mb-4 flex items-center gap-1 rounded-full px-2 py-1.5",
         )}
       >
         {DATA.navbar.map((item) => (
