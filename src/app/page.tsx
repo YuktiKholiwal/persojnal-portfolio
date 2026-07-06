@@ -5,6 +5,7 @@ import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { GitHubSection } from "@/components/github-section";
+import { SkillIcon } from "@/components/skill-icon";
 
 const DELAY = 0.04;
 
@@ -143,8 +144,12 @@ export default function Page() {
                     {group.items.map((skill) => (
                       <span
                         key={skill}
-                        className="flex h-7 items-center rounded-md border border-border bg-secondary/50 px-3 text-sm font-medium text-secondary-foreground"
+                        className="flex h-7 items-center gap-1.5 rounded-md border border-border bg-secondary/50 pl-2 pr-3 text-sm font-medium text-secondary-foreground"
                       >
+                        <SkillIcon
+                          name={skill}
+                          className="size-3.5 shrink-0 opacity-70"
+                        />
                         {skill}
                       </span>
                     ))}
