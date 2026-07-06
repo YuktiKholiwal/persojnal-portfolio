@@ -18,9 +18,9 @@ export const DATA = {
   url: "https://yuktikholiwal.com",
   location: "New York",
   description:
-    "I build the AI you talk to: real-time voice agents, a coding agent written from scratch in Zig, and the front-ends that make all of it usable.",
+    "I build developer tools for the AI era. I wrote zac, a coding agent from scratch in Zig, and cdesign, a marketplace that turns real websites into specs AI agents can build from.",
   summary:
-    "I'm a software engineer who ships fast. What I'm good at is turning large language models into products people actually use. I founded 9thgen.ai, a real-time voice-agent platform that now takes customer calls for paying clients, and I wrote zac, a coding agent built from scratch in Zig with zero dependencies. When I joined Y Lift I inherited an undocumented production app, taught myself .NET and Blazor from scratch, and shipped a full platform migration in one month for 10,000+ monthly users at 99.8% uptime. Hand me an unfamiliar codebase and I'll get something working. (I also hold multiple years of US work authorization, so sponsorship isn't a near-term concern.)",
+    "I'm a software engineer who ships fast, mostly building developer tools around large language models. I wrote zac, a coding agent built from scratch in Zig with zero dependencies, and cdesign, which scrapes real websites into installable design specs so AI agents build on-brand UI (shipped as an npm CLI). Before that I founded 9thgen.ai, a voice-agent platform now taking calls for paying clients. At Y Lift I inherited an undocumented production app, taught myself .NET and Blazor from scratch, and shipped a full platform migration in one month for 10,000+ monthly users at 99.8% uptime. Hand me an unfamiliar codebase and I'll get something working. (I also hold multiple years of US work authorization, so sponsorship isn't a near-term concern.)",
   avatarUrl: "/avatar.png", // drop a square image at public/avatar.png
 
   navbar: [
@@ -294,37 +294,6 @@ export const DATA = {
         "Turns a prompt into an editable mind map you can expand and rearrange live, with Anthropic wired in to refine it through chat.",
       technologies: ["Next.js", "React Flow", "Anthropic API"],
       links: [],
-      image: "",
-    },
-    {
-      title: "Offline Voice AI Assistant",
-      tagline: "Speech-to-speech, fully local",
-      role: "",
-      href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant",
-      dates: "",
-      active: true,
-      description:
-        "A fully local speech-to-speech assistant built on open-source models, no cloud. The privacy-first take on my 9thgen voice work.",
-      technologies: ["Python", "Open-source LLMs", "Speech-to-text", "TTS"],
-      links: [
-        { type: "GitHub", href: "https://github.com/YuktiKholiwal/Offline-voice-ai-assistant" },
-      ],
-      image: "",
-    },
-    {
-      title: "Miami '26 Trip Organizer",
-      tagline: "One app to wrangle 15 friends and a chaotic group chat",
-      role: "",
-      href: "https://miami-trip-organizer.vercel.app",
-      dates: "",
-      active: true,
-      description:
-        "A live-syncing PWA that planned a 15-person Miami trip, flights, stay, and itinerary in one shared app. Fixed what the group chat couldn't.",
-      technologies: ["JavaScript", "PWA", "Real-time sync", "Vercel"],
-      links: [
-        { type: "Website", href: "https://miami-trip-organizer.vercel.app" },
-        { type: "GitHub", href: "https://github.com/YuktiKholiwal/miami-trip-organizer" },
-      ],
       image: "",
     },
   ],
