@@ -111,12 +111,12 @@ export const DATA = {
       company: "Y Lift",
       href: "#",
       location: "New York",
-      title: "Full Stack Developer (Flutter & .NET)",
+      title: "Lead Frontend Developer",
       logoUrl: "",
       start: "Mar 2025",
       end: "Present",
       description:
-        "Inherited an undocumented production codebase and self-taught a new stack (.NET 8, Blazor, C#, Flutter), shipping to production within weeks. Led a full migration from Flutter to .NET 8 + Blazor in one month for an app serving 10,000+ monthly active users, and held 99.8% uptime throughout. Built storefront features (cart, checkout, promotions) and feedback and issue APIs that handle 10+ daily tickets, cutting resolution time 40%.",
+        "Lead frontend developer shipping new production features from scratch, often daily. Rebuilt the storefront (catalog, cart, checkout, auth) through a full migration from Flutter to .NET 8 + Blazor for an app serving 10,000+ monthly users at 99.8% uptime.",
     },
     {
       company: "9thgen.ai",
