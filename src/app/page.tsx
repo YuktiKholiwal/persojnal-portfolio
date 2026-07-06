@@ -179,7 +179,7 @@ export default function Page() {
             <span className="w-fit rounded-md bg-foreground px-3 py-1 text-xs font-medium text-background">
               My Projects
             </span>
-            <h2 className="text-2xl font-bold tracking-tight">Stuff I&apos;ve shipped</h2>
+            <h2 className="text-2xl font-bold tracking-tight">Some of the Stuff I&apos;ve shipped</h2>
             <p className="text-muted-foreground">
               A voice platform with paying clients, a coding agent written from
               scratch in Zig, and a bunch of things in between. Plenty more on my

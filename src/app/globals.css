@@ -92,6 +92,17 @@ html {
   height: auto !important;
 }
 
+/* GitHub-style hover: highlight the tile you're pointing at. */
+.github-calendar .react-activity-calendar__calendar rect {
+  transition: stroke 120ms ease;
+}
+
+.github-calendar .react-activity-calendar__calendar rect:hover {
+  stroke: var(--foreground);
+  stroke-opacity: 0.7;
+  stroke-width: 1.5px;
+}
+
 /* ── Frosted glass panel ── */
 .glass {
   background: var(--glass-bg);
